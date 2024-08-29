@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\setstretch{1.0}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\begin{document}
+\section*{Intro}
+
+This serves as a personal note for learning about Temporal Logic of Action (TLA).
+
+\section*{Definitions that will come handy}
+I rather lay out all the definitions needed for the learning of the subject. It always feels good to have a place where all of the newly-learned definitions live, so I can come back and review each of them anytime I want.
+
+I will be just laying out definitions and sometimes with a few examples. This section should be treated as a reference (usually at the end of a book).
+
+Assuming we all have some understanding on \underline{propositional logic}, such as familiarity with concepts like \underline{premises}, \underline{conclusion} and \underline{deduction}, we can start with a few basic definitions.
+
+\begin{definition}[Predicate]
+
+A predicate is a function from variables to $\left\{TRUE, FALSE\right\}$
+
+For example, $P(X) := X \text{is the multiple of two}$ is a predicate depending on the variable $X$. 
+
+Depending on the input, the predicate can be true or false. In this example, $P(1)$ is false and $P(2)$ is false.
+
+
+\end{definition}
+\end{document}

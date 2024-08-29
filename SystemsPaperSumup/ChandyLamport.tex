@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\setstretch{1.0}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\begin{document}
+
+\begin{definition}[Process]
+A process can record its own state and the msg it sends and receives, it can record nothing else.
+
+Processes do not share locks and memory.
+\end{definition}
+
+
+\begin{definition}[stable property]
+A predicate $y$ is said to be a stable property of system $D$ if $y(S)$ is true for some state $S$ of system $D$ and $y(S')$ is true for all $S-reachable$ states $S'$.
+
+In plain words, if $y$ is true at some point, it will stay being true.
+\end{definition}
+
+
+\end{document}

@@ -1,0 +1,12 @@
+# Ignore LaTeX intermediate and log files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+
+# Don't ignore .tex and .pdf files
+!*.tex
+!*.pdf
+
+*.DS_Store

@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\setstretch{1.0}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}
+\theoremstyle{theorem}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\begin{document}
+\begin{definition}[Context Free Grammar]
+    A Context Free Grammar (CFG) $G$ is a 4-tuple $(V, \Sigma, R, S)$ where:
+    \begin{enumerate}
+        \item  $V$ finite set of variables
+        \item  $\Sigma$ finite set of terminal symbols
+        \item  $R$ finite set of RULES ($V \rightarrow (V \cup \Sigma)^{*}$)
+        \item  $S$ the start variable
+    \end{enumerate}
+\end{definition}
+
+
+\begin{definition}[Pumping Lemma for CFLs]
+    For every CFL $A$, there is a $p$ such that if $s \in A$ and $|s| \geq p$ then $s = uvxyz$ where
+    \begin{enumerate}
+        \item $uv^ixy^iz \in A$ for all $i \geq 0$
+        \item $vy \neq \sigma$
+        \item $|vxy| \leq p$
+    \end{enumerate}
+
+\begin{definition}[Turing Machine]
+A Turing machine is a three-tuple, $(\Sigma, \Lambda)$
+\end{definition}
+
+\end{definition}
+\end{document}
