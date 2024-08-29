@@ -5,6 +5,21 @@
 \usepackage{geometry} % for setting page dimensions
 \usepackage{datetime}
 
+% Define a new theorem-like environment for Examples
+\newtheoremstyle{example}
+  {3pt} % Space above
+  {3pt} % Space below
+  {\itshape} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal`)
+
+\theoremstyle{example}
+\newtheorem{example}{Example}[section]
+
+
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
@@ -76,33 +91,24 @@ A Turing Machine M
 \end{definition}
 \subsection{A few examples regarding Turing Machines}
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}
-\node at (0.5, 0.5) {$\triangleright$}; \draw (0, 0) rectangle (1, 1);
-\node at (1.5, 0.5) {}; \draw (1, 0) rectangle (2, 1);
-\node at (2.5, 0.5) {}; \draw (2, 0) rectangle (3, 1);
-\node at (3.5, 0.5) {}; \draw (3, 0) rectangle (4, 1);
-\node at (4.5, 0.5) {}; \draw (4, 0) rectangle (5, 1);
-\node at (5.5, 0.5) {}; \draw (5, 0) rectangle (6, 1);
-\node at (6.5, 0.5) {...};
-% Extend the last cell's top and bottom lines
-\draw (6, 1) -- (8, 1); % Extend the top line
-\draw (6, 0) -- (8, 0); % Extend the bottom line
-% Head pointer
-\draw[thick, ->] (2.5, 1.5) -- (2.5, 1.1); % Arrow pointing to the third cell
-% Head label
 
-\node[above] at (2.5, 1.5) {H};
-% Right arrow for unidirectional movement
-%\draw[thick, ->] (7.2, 0.5) -- (8.2, 0.5);
+\begin{example}[Erase]
+Given an input $x \in \left\{0,1\right\}^{*}$ , erase the input (i.e. replace the input with blank character).
+\end{example}
 
-% \node[right] at (8.2, 0.5) {Right};
-\end{tikzpicture}
-\caption{a turing machine tape}
-\label{fig:figure name}
-\end{figure}
 
+
+\begin{example}[Copy]
+Given an input $x \in \left\{0,1\right\}^{*}$, copy the input string to the end.
+\end{example}
+
+
+\begin{example}[Addition]
+
+\end{example}
+
+\begin{example}[Sorting]
+\end{example}
 \subsection{Why tape size doesn't matter, and Oblivious Turing Machines}
 
 \end{document}
